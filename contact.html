@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Codify.ink – Learn Frontend Offline</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css" />
+      </head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+          <a class="navbar-brand fw-bold" href="#"><img src="logo.svg" height="30px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="curriculum.html">Curriculum</a></li>
+              <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <!-- Contact Page Hero Banner -->
+<section class="section-alt hero text-center bg-light">
+    <div class="container">
+      <h1 class="mb-3">Contact Us</h1>
+      <p class="lead text-dark mb-0">
+        Whether you have questions, want to enroll, or just curious about what we do — we’re happy to hear from you. Fill out the form below and we’ll get back to you soon!
+      </p>
+    </div>
+  </section>
+  
+    <section class="container py-5">
+        <h2 class="text-center mb-4">Get in Touch</h2>
+        <form class="mx-auto" style="max-width: 700px;" action="/submit-form" method="POST">
+          
+          <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="name" name="name" required />
+          </div>
+      
+          <div class="mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" name="email" required />
+          </div>
+      
+          <div class="mb-3">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" id="phone" name="phone" required />
+          </div>
+      
+          <div class="mb-3">
+            <label for="goal" class="form-label">Your Goal</label>
+            <select class="form-select" id="goal" name="goal" required>
+              <option value="">Select your goal</option>
+              <option value="freelancing">Become a freelancer</option>
+              <option value="interview">Crack frontend interview</option>
+              <option value="product">Build own product/website</option>
+              <option value="first-job">Get first dev job</option>
+            </select>
+          </div>
+      
+          <div class="mb-3">
+            <label class="form-label">How did you hear about us?</label><br />
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="source" value="Instagram" id="insta" />
+              <label class="form-check-label" for="insta">Instagram</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="source" value="WhatsApp" id="whatsapp" />
+              <label class="form-check-label" for="whatsapp">WhatsApp</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="source" value="Friend" id="friend" />
+              <label class="form-check-label" for="friend">Friend</label>
+            </div>
+          </div>
+      
+          <div class="mb-3">
+            <label for="message" class="form-label">Message / Questions</label>
+            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+          </div>
+      
+          <div class="text-center">
+            <button type="submit" class="btn btn-gradient px-5">Submit</button>
+          </div>
+      
+        </form>
+      </section>
+      
+</body>
+</html>

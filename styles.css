@@ -1,0 +1,306 @@
+/* landing page styles */
+
+:root {
+  --sunrise-orange: #ff6b00;
+  --sun-yellow: #ffd700;
+  --sky-blue: #00adef;
+  --deep-navy: #1a1a40;
+  --off-white: #faf9f6;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+  background: linear-gradient(180deg, #fff5e1, #e3fdfd);
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--sunrise-orange), var(--sky-blue));
+  background-size: 200% 200%;
+  animation: moveGradient 8s ease infinite;
+  color: #1a1a40; 
+  text-align: center;
+  padding: 100px 20px;
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.hero span {
+  color: #1a1a40;
+}
+
+.cta-buttons .btn {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.btn-gradient {
+  background: linear-gradient(45deg, #ff8c42, #ffa07a);
+  color: white;
+  border: none;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(45deg, var(--sun-yellow), var(--sunrise-orange));
+}
+
+.btn-outline-danger {
+  border-color: var(--sunrise-orange);
+  color: var(--sunrise-orange);
+}
+
+.btn-outline-danger:hover {
+  background-color: var(--sunrise-orange);
+  color: white;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: var(--deep-navy);
+}
+
+.card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 20px;
+  transition: transform 0.2s;
+  min-height: 340px;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  background: linear-gradient(135deg, #fbd786, #f7797d);
+  color: #5e2750;
+}
+
+.card-icon i {
+  font-size: 2rem;
+  color: var(--sunrise-orange);
+  margin-bottom: 10px;
+}
+
+.section-title {
+    font-weight: 700;
+    font-size: 2rem;
+  }
+  
+footer {
+  background: linear-gradient(to right, var(--deep-navy), #3f3d56);
+  color: white;
+  padding: 40px 0;
+}
+
+.section-alt {
+  background: radial-gradient(circle at top left, #ffe29f, #ffa99f);
+}
+
+.section-dark {
+  background: linear-gradient(to right, #1a1a40, #3f3d56);
+  color: white;
+}
+
+.nav-link:hover {
+  color: var(--sunrise-orange) !important;
+}
+
+/* curriculum */
+
+/* Accordion Container Styling */
+
+.accordion-item {
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Accordion Button (Header) Styling */
+.accordion-button {
+  font-weight: 600;
+  font-size: 1.1rem;
+  background-color: var(--off-white);
+  color: var(--deep-navy);
+  transition: background-color 0.3s ease;
+}
+
+.accordion-button:hover {
+  background-color: #fcecd4;
+}
+
+/* Accordion Body Styling */
+.accordion-body {
+  background-color: #fffdf9;
+  padding: 20px;
+}
+
+/* UL Styling */
+.accordion-body ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.accordion-body li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 12px;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Custom Bullet Icon */
+/* .accordion-body li::before { */
+  /* content: "\f0da"; FontAwesome angle-right */
+  /* font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--sunrise-orange);
+} */
+
+/* portfolio styles */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* Navbar Base */
+.navbar {
+  
+  background: linear-gradient(135deg, #ffa99f, #ffe29f);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    font-family: "Inter", sans-serif;
+}
+
+/* Navbar Brand (Your Name) */
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #333;
+  letter-spacing: 0.4px;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+  color: #0d6efd;
+}
+
+/* Nav Links - tighter, spaced, modern */
+.navbar-nav .nav-link {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #444;
+  padding: 6px 10px;
+  margin: 0 6px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Hover underline animation */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: #0d6efd;
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #0d6efd;
+  font-weight: 600;
+}
+
+/* Active link state styling (if you ever set it manually or via JS) */
+.navbar-nav .nav-link.active {
+  color: #0d6efd;
+  font-weight: 600;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+section:not(:last-of-type) {
+  border-bottom: 1px solid #eee;
+}
+p, .lead {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+.section-title {
+  font-size: 2.25rem; /* or clamp() for responsiveness */
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.codify-benefits li {
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.project-card img{
+  height: 180px; 
+  object-fit: cover;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.who-card {
+  transition: all 0.3s ease;
+  background-color: #a3d4d6;
+}
+
+.who-card:hover {
+  background-color: #8ec6c8;
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #fbd786, #f7797d);
+}
+
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  body {
+    font-size: 1.1rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,15 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Left Bracket -->
+  <path d="M30 10 L15 30 L30 50" stroke="#1E88E5" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Right Bracket -->
+  <path d="M70 10 L85 30 L70 50" stroke="#F4511E" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Slash -->
+  <line x1="55" y1="10" x2="45" y2="50" stroke="#FFCA28" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Text -->
+  <text x="95" y="40" font-family="Inter, sans-serif" font-size="26" fill="#2E2E2E" font-weight="600">
+    codify
+  </text>
+</svg>
