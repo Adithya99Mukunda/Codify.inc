@@ -269,6 +269,20 @@
   
     </div>
   </section>
+<button id="backToTop" class="back-to-top"><i class="fas fa-arrow-up"></i></button>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+const backBtn = document.getElementById("backToTop");
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 300) {
+    backBtn.classList.add("show");
+  } else {
+    backBtn.classList.remove("show");
+  }
+});
+backBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+</script>
 </body>
 </html>

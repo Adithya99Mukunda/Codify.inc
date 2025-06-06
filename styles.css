@@ -304,3 +304,30 @@ p, .lead {
     font-size: 2rem;
   }
 }
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--sunrise-orange);
+  color: #fff;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+.back-to-top.show {
+  display: flex;
+}
+
+/* Gradient text for section titles */
+.section-title {
+  background: linear-gradient(45deg, var(--sunrise-orange), var(--sky-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
