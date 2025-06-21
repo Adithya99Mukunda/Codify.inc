@@ -1,46 +1,73 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { FaBars } from "react-icons/fa";
 import logo from "../assets/logo1.PNG";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-gradient navbar-expand-lg shadow-sm sticky-top">
-      <div className="container">
-        <Link className="navbar-brand fw-bold" to="/">
-          <img src={logo} alt="Codify Logo" height="30" />
-        </Link>
+    <nav className="navbar navbar-expand-lg shadow-sm sticky-top">
+      <div className="container px-3">
+        {/* Logo */}
+        <NavLink className="navbar-brand fw-bold" to="/">
+          <img
+            src={logo}
+            alt="Codify Logo"
+            style={{ height: "40px", objectFit: "contain" }}
+          />
+        </NavLink>
+
+        {/* Mobile Toggle Button */}
         <button
-          className="navbar-toggler"
+          className="navbar-toggler border-0"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
+          aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <FaBars size={22} />
         </button>
-        <div
-          className="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
+
+        {/* Nav Links */}
+        <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="nav-link" to="/">
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  `nav-link ${isActive ? "active" : ""}`
+                }
+              >
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/curriculum">
+              <NavLink
+                to="/curriculum"
+                className={({ isActive }) =>
+                  `nav-link ${isActive ? "active" : ""}`
+                }
+              >
                 Curriculum
-              </Link>
+              </NavLink>
             </li>
-
             <li className="nav-item">
-              <Link className="nav-link" to="/portfolio">
+              <NavLink
+                to="/portfolio"
+                className={({ isActive }) =>
+                  `nav-link ${isActive ? "active" : ""}`
+                }
+              >
                 Portfolio
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/contact">
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  `nav-link ${isActive ? "active" : ""}`
+                }
+              >
                 Contact
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>

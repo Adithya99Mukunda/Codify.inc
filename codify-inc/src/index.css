@@ -17,8 +17,9 @@ html, body, #root {
 }
 
 /* === Navbar === */
+
 .navbar {
-  background-color: var(--codify-white);
+  background: linear-gradient(to right, #fffef2, #f7f8f4);
   border-bottom: 1px solid #e5e7eb;
   min-height: 64px;
 }
@@ -31,12 +32,24 @@ html, body, #root {
 .nav-link {
   color: var(--codify-text-dark);
   font-weight: 500;
-  margin-left: 1rem;
 }
 
-.nav-link:hover {
-  color: var(--codify-primary);
+.nav-link.active {
+  color: var(--codify-accent); /* orange highlight */
+  font-weight: 600;
+  position: relative;
 }
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--codify-accent);
+}
+
 
 /* === Hero Section === */
 .hero {
