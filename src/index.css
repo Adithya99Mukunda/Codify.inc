@@ -1,0 +1,354 @@
+/* === Root Variables === */
+:root {
+  --codify-primary: #2563eb;
+  /* Blue-600 */
+  --codify-accent: #f97316;
+  /* Orange-500 */
+  --codify-bg: #f9fafb;
+  /* Light background */
+  --codify-text-dark: #1f2937;
+  /* Slate-800 */
+  --codify-text-light: #6b7280;
+  /* Slate-500 */
+  --codify-white: #ffffff;
+  --codify-shadow: rgba(0, 0, 0, 0.08);
+}
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(rgb(255, 254, 242), rgb(247, 248, 244));
+  font-family: 'Inter', system-ui, sans-serif;
+}
+/* === Navbar === */
+
+.navbar {
+  background: linear-gradient(to right, #fffef2, #f7f8f4);
+  border-bottom: 1px solid #e5e7eb;
+  min-height: 64px;
+}
+.navbar-brand {
+  font-weight: bold;
+  color: var(--codify-primary);
+}
+.nav-link {
+  color: var(--codify-text-dark);
+  font-weight: 500;
+}
+.nav-link.active {
+  color: var(--codify-accent);
+  /* orange highlight */
+  font-weight: 600;
+  position: relative;
+}
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--codify-accent);
+}
+/* === Hero Section === */
+.hero {
+  background: linear-gradient(135deg, rgb(235 181 20 / 36%) 0%, rgba(249, 115, 22, 0.08) 100%), var(--codify-bg);
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  color: var(--codify-text-dark);
+  text-align: center;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.hero h1 span {
+  color: var(--codify-accent);
+}
+.hero p {
+  font-size: 1.25rem;
+  color: var(--codify-text-light);
+}
+.hero .cta-buttons .btn {
+  margin: 0 0.5rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.hero-bottom-wave {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  line-height: 0;
+  z-index: 0;
+}
+.hero svg {
+  display: block;
+  width: 100%;
+  height: 80px;
+}
+/* === Buttons === */
+.btn-gradient {
+  background-color: var(--codify-primary);
+  color: white;
+  border: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+.btn-gradient:hover {
+  background-color: #1d4ed8;
+}
+.btn-outline-danger {
+  border: 2px solid var(--codify-accent);
+  color: var(--codify-accent);
+  font-weight: 600;
+}
+.btn-outline-danger:hover {
+  background-color: var(--codify-accent);
+  color: white;
+}
+/* === Cards & Hovers === */
+.feature-card,
+.profile-card,
+.learn-card,
+.mentor-card,
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card {
+  min-height: 500px;
+}
+.feature-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+.feature-card:hover,
+.profile-card:hover,
+.learn-card:hover,
+.mentor-card:hover,
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px var(--codify-shadow);
+}
+/* === Section Titles === */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--codify-text-dark);
+  margin-bottom: 1rem;
+}
+.curriculum-wrapper {
+  max-width: 800px;
+  margin: auto;
+}
+/* MAIN TOPIC ACCORDION */
+.main-topic .main-heading {
+  background: #fff5e6;
+  color: #7c3aed;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 1rem;
+}
+.main-topic .main-heading.collapsed {
+  background: #fdfdfd;
+  color: #444;
+}
+/* INNER SUBTOPIC ACCORDION */
+.subtopic-item {
+  background-color: transparent;
+  border: none;
+  margin-top: 0.5rem;
+}
+.subtopic-heading {
+  background-color: #f0f9ff;
+  color: #1e40af;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+}
+.subtopic-heading.collapsed {
+  background-color: #e0f0ff;
+  color: #0f172a;
+  margin-bottom: 15px;
+}
+.subtopic-item .accordion-body {
+  background: #ffffff;
+  border-left: 3px solid #0ea5e9;
+  margin-left: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 4px;
+}
+.styled-list li {
+  list-style: none;
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  /* align vertically */
+  gap: 0.5rem;
+}
+.styled-list li::before {
+  content: "•";
+  color: #007bff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.3rem;
+  line-height: 1;
+}
+/* === List Styling === */
+.styled-list {
+  list-style: none;
+  padding-left: 2.2rem;
+}
+.styled-list li:hover {
+  background-color: #f1f5ff;
+}
+/* === Misc Text === */
+.text-pink {
+  color: #e1306c;
+}
+/* === Forms === */
+form {
+  padding: 2rem 1rem;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+.form-control,
+.form-select {
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  background-color: #fcfcfc;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--codify-primary);
+  box-shadow: 0 0 0 0.15rem rgba(37, 99, 235, 0.08);
+  background-color: #ffffff;
+}
+
+label.form-label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #1f2937;
+}
+
+.form-check {
+  margin-top: 1.2rem;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.btn-primary {
+  background-color: var(--codify-primary);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.05rem;
+  border-radius: 6px;
+  border: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #1e40af;
+}
+
+/* === Footer === */
+.footer-section {
+  background-color: #111827;
+  /* dark slate */
+  color: #d1d5db;
+  font-size: 0.9rem;
+}
+.footer-section .text-accent {
+  color: var(--codify-accent);
+}
+.footer-section .btn-outline-light {
+  border-color: #d1d5db;
+  color: #d1d5db;
+}
+.footer-section .btn-outline-light:hover {
+  background-color: #f97316;
+  border-color: #f97316;
+  color: white;
+}
+.contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+}
+.contact-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+/* 🧱 MAIN TOPIC STYLING */
+.accordion-item.main-topic {
+  background-color: #fff8f0;
+  /* light background for outer accordion */
+  border: 1px solid #eee;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+.accordion-button.main-heading {
+  background-color: transparent;
+  font-weight: 600;
+  color: #6f42c1;
+}
+/* ✅ INNER ACCORDIONS FLAT */
+.accordion.subtopics .accordion-item {
+  background: none;
+  border: none;
+}
+.accordion.subtopics .accordion-button {
+  background-color: #faffe9;
+  /* subtle blue bg */
+  border: none;
+  font-weight: 500;
+  color: #004085;
+}
+.accordion.subtopics .accordion-button:not(.collapsed) {
+  box-shadow: none;
+}
+.accordion-body {
+  background: transparent !important;
+  border: none !important;
+  padding: 0.5rem 1rem !important;
+}
+/* 🔵 ALIGN BULLETS PERFECTLY */
+.styled-list li {
+  list-style: none;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.8;
+  font-size: 15px;
+}
+/* ✳️ Replacing default bullet with a circle-dot */
+.styled-list li::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: #0d6efd;
+  /* Bootstrap primary */
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
