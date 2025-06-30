@@ -6,6 +6,10 @@ const DemoModal = ({ show, handleClose }) => {
     <Modal show={show} onHide={handleClose} centered>
       <Modal.Header closeButton>
         <Modal.Title>Register for Free Demo</Modal.Title>
+        <p className="text-muted mb-0">
+          Fill in your details below to reserve your spot for the live online
+          demo. We'll send you the meeting link via WhatsApp or email.
+        </p>
       </Modal.Header>
       <Modal.Body>
         <form

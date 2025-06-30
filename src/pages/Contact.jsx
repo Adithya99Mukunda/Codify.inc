@@ -1,8 +1,11 @@
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import HeroSection from '../components/HeroSection';
+import { useState } from 'react';
 
 const Contact = () => {
+  const [hasLaptop, setHasLaptop] = useState('Yes');
+
   return (
     <>
       <Navbar />
@@ -17,7 +20,6 @@ const Contact = () => {
             <form
               action="https://formspree.io/f/movwqvrr"
               method="POST"
-              className="border rounded p-4 shadow-sm bg-light"
             >
               <div className="mb-3">
                 <label className="form-label ">Full Name</label>
@@ -36,8 +38,13 @@ const Contact = () => {
 
               <div className="mb-3">
                 <label className="form-label">Do you have a laptop?</label>
-                <select name="laptop" className="form-select" required>
-                  <option value="">Select an option</option>
+                <select
+                  name="laptop"
+                  className="form-select"
+                  required
+                  value={hasLaptop}
+                  onChange={e => setHasLaptop(e.target.value)}
+                >
                   <option value="Yes">Yes</option>
                   <option value="No">No</option>
                 </select>
@@ -72,7 +79,12 @@ const Contact = () => {
                 </label>
               </div>
 
-              <button type="submit" className="btn btn-primary w-100">
+              <button
+                type="submit"
+                className="btn btn-primary w-100"
+                disabled={hasLaptop === 'No'}
+                title={hasLaptop === 'No' ? "You need a laptop to apply." : undefined}
+              >
                 Submit
               </button>
             </form>
