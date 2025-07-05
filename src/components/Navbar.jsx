@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
-import logo from "../assets/logo1.PNG";
+import logo from "../assets/logoog.png";
 
 const Navbar = () => {
   return (
@@ -11,7 +11,12 @@ const Navbar = () => {
           <img
             src={logo}
             alt="Codify Logo"
-            style={{ height: "40px", objectFit: "contain" }}
+            style={{
+              height: "60px", // Increase this as needed
+              objectFit: "contain",
+              marginTop: "-10px", // Adjust these values to center vertically
+              marginBottom: "-10px",
+            }}
           />
         </NavLink>
 
@@ -27,7 +32,10 @@ const Navbar = () => {
         </button>
 
         {/* Nav Links */}
-        <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <div
+          className="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
           <ul className="navbar-nav">
             <li className="nav-item">
               <NavLink

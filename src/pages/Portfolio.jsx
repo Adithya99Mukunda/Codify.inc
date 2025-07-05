@@ -387,7 +387,7 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Certifications Section */}
       <section id="certifications" className="py-5">
         <div className="container">
@@ -430,22 +430,24 @@ const Portfolio = () => {
 
       {/* Contact Section */}
       <section id="contact" className="py-5 bg-white border-top">
-        <div className="container text-center">
-          <h2 className="mb-3 fw-bold">Let's Connect</h2>
+        <div
+          className="container text-center p-5 rounded-4 shadow-sm"
+          style={{ backgroundColor: "#fefefe" }}
+        >
+          <h2 className="mb-3 fw-bold display-5">Let’s Connect ✉️</h2>
           <p className="mb-4 fs-5 text-muted">
             Got a project or idea? I'd love to hear from you!
           </p>
 
           <div className="d-flex justify-content-center gap-4 fs-3">
             <a
-              href="mailto:adithya.chandrasekhar99@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:adithya.chandrasekhar99@gmail.com?subject=Let%27s%20Connect&body=Hi%20Adithya,"
               className="contact-icon bg-danger text-white"
               aria-label="Email"
             >
               <i className="bi bi-envelope-fill"></i>
             </a>
+
             <a
               href="https://wa.me/918639460402"
               target="_blank"

@@ -22,7 +22,7 @@ const Curriculum = () => {
             <div className="accordion-item main-topic mb-3">
               <h2 className="accordion-header">
                 <button
-                  className="accordion-button main-heading"
+                  className="accordion-button main-heading collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#uxCollapse"
@@ -31,7 +31,7 @@ const Curriculum = () => {
                   The UX Layer
                 </button>
               </h2>
-              <div id="uxCollapse" className="accordion-collapse collapse show">
+              <div id="uxCollapse" className="accordion-collapse collapse">
                 <div className="accordion-body p-0">
                   <div className="accordion subtopics" id="uxSubtopics">
                     {/* HTML */}
