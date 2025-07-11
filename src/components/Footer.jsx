@@ -15,7 +15,7 @@ const Footer = () => {
           {/* Logo + Address */}
           <div className="col-md-4 text-center text-md-start">
             <h5 className="fw-bold mb-2">
-              Codify<span className="text-accent">.ink</span>
+              Tech <span className="text-accent">Mukunda</span>
             </h5>
             <p className="small mb-1">
               <FaMapMarkerAlt className="me-2 text-white" />
@@ -54,7 +54,7 @@ const Footer = () => {
             <p className="mb-1 small">
               Made with <FaHeart className="text-danger" /> in Khammam
             </p>
-            <p className="mb-0 small">&copy; {new Date().getFullYear()} Codify.ink</p>
+            <p className="mb-0 small">&copy; {new Date().getFullYear()} Tech Mukunda</p>
           </div>
         </div>
       </div>

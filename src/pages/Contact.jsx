@@ -11,7 +11,7 @@ const Contact = () => {
       <Navbar />
       <HeroSection
         title="Contact Us"
-        subtitle="Have a question or want to join Codify? Fill in your details and we’ll reach out to you soon."
+        subtitle="Have a question or want to join Tech Mukunda? Fill in your details and we’ll reach out to you soon."
       />
 
       <section className="container py-5" id="contact">
@@ -100,7 +100,7 @@ const Contact = () => {
                   className="form-check-label text-muted"
                   htmlFor="offlineConfirm"
                 >
-                  I understand Codify.ink is an offline course conducted in
+                  I understand Tech Mukunda is an offline course conducted in
                   Khammam.
                 </label>
               </div>

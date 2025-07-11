@@ -84,7 +84,7 @@ const UniqueSection = () => {
     >
       <div className="container text-center">
         <h2 className="fw-bold mb-5">
-          What Makes <span className="text-primary">Codify.ink</span> Unique?
+          What Makes <span className="text-primary">Tech Mukunda</span> Unique?
         </h2>
         <div className="row">
           {features.map(({ icon: Icon, title, points }, idx) => (
