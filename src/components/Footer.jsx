@@ -29,7 +29,7 @@ const Footer = () => {
 
           {/* Socials */}
           <div className="col-md-4 text-center">
-            <a
+            {/* <a
               href="https://instagram.com/adithya.ink"
               target="_blank"
               rel="noopener noreferrer"
@@ -37,7 +37,7 @@ const Footer = () => {
             >
               <FaInstagram className="me-2 text-pink" />
               @adithya.ink
-            </a>
+            </a> */}
             <a
               href="https://wa.me/918639460402"
               target="_blank"
