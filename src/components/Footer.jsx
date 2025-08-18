@@ -54,7 +54,7 @@ const Footer = () => {
             <p className="mb-1 small">
               Made with <FaHeart className="text-danger" /> in Khammam
             </p>
-            <p className="mb-0 small">&copy; {new Date().getFullYear()} Tech Mukunda</p>
+            <p className="mb-0 small">&copy; {new Date().getFullYear()} Code Medha</p>
           </div>
         </div>
       </div>

@@ -1,8 +1,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSection";
-import CurriculumContent from '../components/CurriculumContent';
-
+import CurriculumContent from "../components/CurriculumContent";
 
 const Curriculum = () => {
   return (
@@ -152,9 +151,10 @@ const Curriculum = () => {
             />
 
             {/* React */}
+            {/* Frameworks (React, Node, Express in one accordion) */}
             <SubtopicGroup
-              id="react"
-              title="⚛️ Framework"
+              id="frameworks"
+              title="⚙️ Frameworks"
               topics={[
                 {
                   id: "react-core",
@@ -178,9 +178,57 @@ const Curriculum = () => {
                     "Mini Project (React Todo/Weather/Portfolio)",
                   ],
                 },
+                {
+                  id: "node",
+                  title: "Node.js",
+                  icon: "bi bi-terminal-fill text-success",
+                  items: [
+                    "Introduction to Node.js",
+                    "Setting up a Node.js project",
+                    "Working with npm",
+                    "File System module",
+                    "Event Loop & Async Programming",
+                    "Building a simple server",
+                  ],
+                },
+                {
+                  id: "express",
+                  title: "Express.js",
+                  icon: "bi bi-diagram-3-fill text-primary",
+                  items: [
+                    "What is Express & why use it?",
+                    "Routing basics",
+                    "Middleware in Express",
+                    "Handling requests & responses",
+                    "Building REST APIs",
+                    "Error handling",
+                    "Mini Project: Simple API with Express",
+                  ],
+                },
               ]}
             />
-
+            {/* Databases */}
+            <SubtopicGroup
+              id="databases"
+              title="🗄️ Databases"
+              topics={[
+                {
+                  id: "mongodb",
+                  title: "MongoDB",
+                  icon: "bi bi-database-fill text-success",
+                  items: [
+                    "Introduction to NoSQL",
+                    "Installing MongoDB / Using Atlas",
+                    "CRUD Operations",
+                    "Collections & Documents",
+                    "Indexes & Query Optimization",
+                    "Mongoose ODM Basics",
+                    "Connecting MongoDB with Express",
+                    "Mini Project: Notes App with MongoDB",
+                  ],
+                },
+              ]}
+            />
             {/* Tools */}
             <SubtopicGroup
               id="tools"
