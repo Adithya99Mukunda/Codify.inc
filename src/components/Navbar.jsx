@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
-import logo from "../assets/logo.png";
+import logo from "../assets/Logo.png";
 
 const Navbar = () => {
   return (
