@@ -9,7 +9,7 @@ const Curriculum = () => {
       <Navbar />
       <HeroSection
         title="Curriculum"
-        subtitle="Build more than just websites—build user experiences. Our frontend program isn’t just about coding, it’s about design thinking, logic, and real-world readiness."
+        subtitle="Build more than just websites—build user experiences. Our fullstack program isn’t just about coding, it’s about design thinking, logic, and real-world readiness."
       />
       <CurriculumContent />
 

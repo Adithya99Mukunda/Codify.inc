@@ -1,4 +1,5 @@
-import { FaPalette, FaCogs, FaReact, FaTools, FaBullseye } from "react-icons/fa";
+import { FaPalette, FaCogs, FaReact, FaTools, FaBullseye, FaNodeJs } from "react-icons/fa";
+import { SiExpress } from "react-icons/si";
 
 const content = [
   {
@@ -15,6 +16,16 @@ const content = [
     icon: <FaReact className="text-info fs-1 me-3" />,
     title: "The React Framework - Where Things Get Easy",
     text: "Learn how big companies break complex UIs into components. We'll cover state management, props, router, API calls, and build modern apps."
+  },
+  {
+    icon: <FaNodeJs className="text-success fs-1 me-3" />,
+    title: "Backend with Node.js",
+    text: "Step into server-side programming with Node.js. Learn how to build APIs, connect with databases, and handle backend logic for fullstack apps."
+  },
+  {
+    icon: <SiExpress className="text-dark fs-1 me-3" />,
+    title: "Express.js – The Web Framework",
+    text: "Discover how Express makes backend development faster and cleaner. You'll create RESTful APIs, manage routes, and power your web apps effectively."
   },
   {
     icon: <FaTools className="text-success fs-1 me-3" />,

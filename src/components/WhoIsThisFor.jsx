@@ -4,7 +4,7 @@ const profiles = [
   {
     icon: <FaUserGraduate size={32} className="text-primary mb-2" />,
     title: "Beginners & College Students",
-    desc: "No prior experience? Start from scratch and become frontend-ready.",
+    desc: "No prior experience? Start from scratch and become fullstack-ready.",
   },
   {
     icon: <FaBriefcase size={32} className="text-primary mb-2" />,

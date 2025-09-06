@@ -19,7 +19,7 @@ const Home = () => {
         title={
           <>
             <span style={{ color: '#ff6b00' }}>Become a Job-Ready</span>{' '}
-            Frontend Developer
+            Fullstack Developer
           </>
         }
         subtitle="Offline training in Khammam to help you master HTML, CSS, JS & React — with a portfolio, certification, and freelance readiness."

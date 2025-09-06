@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import Footer from "../components/Footer";
+import ProjectModal from "../components/ProjectModal";
 import Dubai from "../assets/Dubai-command.jpg";
 import AiEducator from "../assets/AiEducator.png";
 import WKCaseLaws from "../assets/Wk-Case-Laws.jpg";
@@ -10,13 +11,112 @@ import Loughs from "../assets/LoughsAgency.jpg";
 import Reddy from "../assets/ReddyLabs.png";
 import Adithya from "../assets/AdithyaMukunda1.jpg";
 
+const projects = [
+  {
+    key: "dubai",
+    title: "Dubai Tourism Dashboard",
+    role: "Frontend Developer (JavaScript, Bootstrap, SaSS, Gramex)",
+    description:
+      "Responsive dashboards for Dubai Tourism across iPad and 5760×1080 ultra-wide displays.",
+    skills: ["JavaScript", "Bootstrap", "SaSS", "Gramex", "Responsive UI"],
+    challenges: [
+      "Two target displays: iPad + 5760×1080 wall",
+      "Conditional layouts for extreme aspect ratios",
+      "Delivered under tight deadlines",
+    ],
+    image: Dubai,
+  },
+  {
+    key: "wk",
+    title: "WK Case Laws – Legal Dashboard",
+    role: "Frontend Developer (React.js)",
+    description:
+      "Built a legal analytics dashboard for a US law firm with reusable React components.",
+    skills: [
+      "React.js",
+      "API Integration",
+      "Frontend Engineering",
+      "UI Design",
+    ],
+    challenges: [
+      "Rendered complex nested data efficiently",
+      "Ensured clean UI for long-form legal content",
+      "Optimized for internal enterprise usage",
+    ],
+    image: WKCaseLaws,
+  },
+  {
+    key: "aiedu",
+    title: "AiEducator – EdTech Platform",
+    role: "Fullstack Developer (Angular, Express.js, Django)",
+    description:
+      "Personalized learning modules with Angular UI, Express APIs, and Django backend.",
+    skills: [
+      "Angular",
+      "Express.js",
+      "Django",
+      "REST APIs",
+      "Perf Optimization",
+    ],
+    challenges: [
+      "Integrated AI-driven math modules",
+      "Scalable state and routing in Angular",
+      "Improved load time with code splitting",
+    ],
+    image: AiEducator,
+  },
+  {
+    key: "arcadia",
+    title: "Arcadia – Energy Analytics",
+    role: "Frontend Developer",
+    description:
+      "Responsive dashboards and UI components for Arcadia’s clean energy platform.",
+    skills: ["React", "Chart.js", "Responsive UI", "Dashboard Development"],
+    challenges: [
+      "Handled high-volume energy datasets",
+      "Built interactive data visualizations",
+      "Ensured cross-browser compatibility",
+    ],
+    image: Arcadia,
+  },
+  {
+    key: "loughs",
+    title: "Loughs Agency – Environmental Dashboard",
+    role: "Frontend Developer (React.js)",
+    description:
+      "Developed a responsive dashboard for monitoring environmental data across regions.",
+    skills: ["React", "Bootstrap", "API Integration", "Responsive Design"],
+    challenges: [
+      "Integrated real-time environmental data",
+      "Reusable UI components",
+      "Optimized for desktop and tablets",
+    ],
+    image: Loughs,
+  },
+  {
+    key: "drreddy",
+    title: "Dr. Reddy’s Laboratories – Engagement Platform",
+    role: "Frontend Developer (React.js)",
+    description:
+      "Enhanced user engagement by 30% through a redesigned platform for Dr. Reddy’s.",
+    skills: ["React.js", "UI/UX", "Performance Optimization", "Responsive UI"],
+    challenges: [
+      "Boosted engagement by 30%",
+      "Optimized component rendering",
+      "Consistent cross-platform UI",
+    ],
+    image: Reddy,
+  },
+];
+
 const Portfolio = () => {
+  const [selected, setSelected] = useState(null);
   return (
     <>
       <Navbar />
       <HeroSection
         title="Hi, I'm Adithya 👋"
-        subtitle="I'm a UX & UI Engineer and Frontend Developer with 5+ years of experience crafting clean, responsive, and accessible web interfaces. I specialize in HTML, CSS, Bootstrap, Tailwind, JavaScript, Angular, and React."
+        subtitle="I'm a UX & UI Engineer and Fullstack Developer with 5+ years of experience crafting clean, responsive, and accessible web interfaces. I specialize in HTML, CSS, Bootstrap, Tailwind, JavaScript, Angular, and React."
       />
 
       {/* About Me Section */}
@@ -36,18 +136,20 @@ const Portfolio = () => {
             <div className="col-md-8">
               <div className="p-4 rounded shadow-lg">
                 <p>
-                  Hi! I’m Adithya — A UX Engineer & Frontend Developer
-                  passionate about designing user-first experiences. With 5
-                  years of experience, I specialize in crafting clean,
-                  accessible, and responsive interfaces using modern
-                  technologies like React, Angular, and Tailwind.
+                  Hi! I’m Adithya — a UI/UX Engineer and Fullstack Developer
+                  with 5 years of experience. I craft clean, responsive, and
+                  user-centric interfaces using modern frameworks like React,
+                  Angular, and Tailwind. On the backend, I work with Node.js,
+                  Express, and MySQL to build scalable APIs and database
+                  solutions, ensuring seamless end-to-end applications.
                 </p>
                 <p>
-                  I thrive at the intersection of design and development —
-                  transforming Figma files into pixel-perfect websites and
-                  solving real-world UX problems one layout at a time. Whether
-                  it’s rapid prototyping or building scalable UIs, I deliver
-                  clarity and efficiency in every line of code.
+                  I bridge design and development — turning ideas into
+                  functional products. From Figma prototypes to production-ready
+                  code, I build scalable, responsive, and user-focused
+                  applications. Whether it’s crafting intuitive UIs or
+                  integrating robust backends, I deliver solutions that balance
+                  usability with performance.
                 </p>
               </div>
             </div>
@@ -60,192 +162,38 @@ const Portfolio = () => {
         <div className="container">
           <h2 className="mb-4 text-center">Projects</h2>
           <div className="row g-4">
-            {/* Dubai Tourism - Private */}
-            <div className="col-md-4 h-100">
-              <div
-                className="card h-100 shadow-md p-3 project-card"
-                title="Private dashboard for internal use"
-              >
-                <img
-                  src={Dubai}
-                  className="card-img-top rounded"
-                  alt="Dubai Tourism Project"
-                />
-                <div className="card-body">
-                  <h5 className="card-title fw-bold">
-                    Dubai Tourism Dashboard
-                  </h5>
-                  <p className="text-muted small mb-1">
-                    <strong>Role:</strong> React UI Developer
-                  </p>
-                  <p className="small text-dark">
-                    Delivered responsive dashboards for both a 5760×1080 command
-                    center display and iPad controllers. Handled conditional
-                    rendering for multi-device UI under tight deadlines.
-                  </p>
+            {projects.map((p) => (
+              <div className="col-md-4" key={p.key}>
+                <div className="card h-100 shadow-sm">
+                  <img
+                    src={p.image}
+                    className="card-img-top"
+                    alt={p.title}
+                    style={{ objectFit: "cover", height: "200px" }}
+                  />
+                  <div className="card-body d-flex flex-column">
+                    <h5 className="fw-bold">{p.title}</h5>
+                    <p className="text-muted small mb-1">
+                      <strong>Role:</strong> {p.role}
+                    </p>
+                    <p className="small text-dark">{p.description}</p>
+                    <button
+                      className="btn btn-outline-dark btn-sm w-100 d-flex align-items-center justify-content-between mt-auto"
+                      onClick={() => setSelected(p)}
+                    >
+                      <span>View details</span>
+                      <span aria-hidden="true">›</span>
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            {/* AiEducator - Clickable */}
-            <div className="col-md-4 h-100">
-              <a
-                href="https://www.aieducator.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-decoration-none text-dark"
-              >
-                <div className="card h-100 shadow-md p-3 project-card">
-                  <img
-                    src={AiEducator}
-                    className="card-img-top rounded"
-                    alt="AiEducator Platform"
-                  />
-                  <div className="card-body">
-                    <h5 className="card-title fw-bold">
-                      AiEducator – EdTech Platform
-                    </h5>
-                    <p className="text-muted small mb-1">
-                      <strong>Role:</strong> Frontend Developer (React.js)
-                    </p>
-                    <p className="small text-dark">
-                      Developed dynamic UI components for personalized learning
-                      experiences. Integrated AI-driven math modules and
-                      optimized performance using code splitting and lazy
-                      loading.
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            {/* WK Case Laws - Private */}
-            <div className="col-md-4 h-100">
-              <div
-                className="card h-100 shadow-md p-3 project-card"
-                title="Private dashboard for internal use"
-              >
-                <img
-                  src={WKCaseLaws}
-                  className="card-img-top rounded"
-                  alt="WK Case Laws Dashboard"
-                />
-                <div className="card-body">
-                  <h5 className="card-title fw-bold">
-                    WK Case Laws – Legal Dashboard
-                  </h5>
-                  <p className="text-muted small mb-1">
-                    <strong>Role:</strong> React Developer
-                  </p>
-                  <p className="small text-dark">
-                    Built a legal analytics dashboard for an American law firm
-                    using React. Focused on clean UI structuring, reusable
-                    components, and seamless data rendering from case law APIs.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="row g-4 mt-4">
-            {/* Arcadia - Clickable */}
-            <div className="col-md-4 h-100">
-              <a
-                href="https://www.arcadia.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-decoration-none text-dark"
-              >
-                <div className="card h-100 shadow-md p-3 project-card">
-                  <img
-                    src={Arcadia}
-                    className="card-img-top rounded"
-                    alt="Arcadia Solar Platform"
-                  />
-                  <div className="card-body">
-                    <h5 className="card-title fw-bold">Arcadia</h5>
-                    <p className="text-muted small mb-1">
-                      <strong>Role:</strong> React UI Developer
-                    </p>
-                    <p className="small text-dark">
-                      Delivered scalable UI components for Arcadia’s clean
-                      energy platform, enabling seamless user experience across
-                      desktop and mobile. Focused on responsive dashboards,
-                      API-driven data visuals, and optimized accessibility for
-                      solar and utility account management.
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            {/* Loughs Agency - Clickable */}
-            <div className="col-md-4 h-100">
-              <a
-                href="https://loughs-agency.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-decoration-none text-dark"
-              >
-                <div className="card h-100 shadow-md p-3 project-card">
-                  <img
-                    src={Loughs}
-                    className="card-img-top rounded"
-                    alt="Loughs Agency Environmental Dashboard"
-                  />
-                  <div className="card-body">
-                    <h5 className="card-title fw-bold">
-                      Loughs Agency – Environmental Dashboard
-                    </h5>
-                    <p className="text-muted small mb-1">
-                      <strong>Role:</strong> Frontend Developer (React.js)
-                    </p>
-                    <p className="small text-dark">
-                      Developed a comprehensive environmental dashboard for
-                      Loughs Agency, focusing on data visualization and user
-                      engagement. Implemented responsive design principles to
-                      ensure accessibility across devices, enhancing public
-                      interaction with environmental data.
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            {/* Dr. Reddy Labs - Clickable */}
-            <div className="col-md-4 h-100">
-              <a
-                href="https://www.drreddys.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-decoration-none text-dark"
-              >
-                <div className="card h-100 shadow-md p-3 project-card">
-                  <img
-                    src={Reddy}
-                    className="card-img-top rounded"
-                    alt="Dr. Reddy Labs"
-                  />
-                  <div className="card-body">
-                    <h5 className="card-title fw-bold">
-                      Reddy Labs – Pharmaceutical Platform
-                    </h5>
-                    <p className="text-muted small mb-1">
-                      <strong>Role:</strong> Frontend Developer (React.js)
-                    </p>
-                    <p className="small text-dark">
-                      Enhanced user engagement by 30% through a redesigned
-                      platform for Dr. Reddy Laboratories. Focused on creating
-                      responsive, accessible interfaces that improved navigation
-                      and usability for healthcare professionals and patients.
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
+            ))}
           </div>
         </div>
       </section>
+
+      {/* Modal */}
+      <ProjectModal project={selected} handleClose={() => setSelected(null)} />
 
       {/* Skills Section */}
       <section id="skills" className="py-5">
@@ -254,7 +202,6 @@ const Portfolio = () => {
           <div className="row text-center g-4">
             {[
               { name: "HTML5", color: "E34F26" },
-              { name: "CSS3", color: "1572B6" },
               { name: "SASS", color: "CC6699" },
               { name: "Bootstrap", color: "7952B3" },
               { name: "Tailwind CSS", color: "06B6D4" },
@@ -302,7 +249,7 @@ const Portfolio = () => {
       <section id="experience" className="py-5">
         <div className="container">
           <h2 className="text-center mb-5">Experience</h2>
-          <div className="row text-center g-4">
+          <div className="row text-center g-4 justify-content-center">
             {/* Experience 1 */}
             <div className="col-md-4">
               <div className="border card p-4 h-100 rounded shadow-sm text-start">
@@ -337,7 +284,7 @@ const Portfolio = () => {
                 <h6 className="text-primary fw-bold">
                   Metagogy Learning Systems
                 </h6>
-                <p className="text-muted mb-3">Apr 2022 – Dec 2023</p>
+                <p className="text-muted mb-3">Jan 2021 – Dec 2023</p>
                 <ul className="text-start small ps-3">
                   <li>
                     Enhanced <span className="fw-bold">Maths AI Educator</span>{" "}
@@ -361,25 +308,6 @@ const Portfolio = () => {
                   <li>
                     Boosted retention by <span className="fw-bold">25%</span>,
                     integrated ML tools.
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Experience 3 */}
-            <div className="col-md-4">
-              <div className="border card p-4 h-100 rounded shadow-sm text-start">
-                <h5 className="mb-1">Software Developer</h5>
-                <h6 className="text-primary fw-bold">CBTS</h6>
-                <p className="text-muted mb-3">Oct 2021 – Mar 2022</p>
-                <ul className="text-start small ps-3">
-                  <li>
-                    Enhanced <span className="fw-bold">internal tools</span>,
-                    increasing task automation by{" "}
-                    <span className="fw-bold">30%</span>.
-                  </li>
-                  <li>
-                    Upgraded frontend skills and worked across UI components.
                   </li>
                 </ul>
               </div>

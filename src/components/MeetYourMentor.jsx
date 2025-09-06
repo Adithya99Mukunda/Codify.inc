@@ -26,7 +26,7 @@ const MeetYourMentor = () => {
                   <div>
                     <h5 className="fw-semibold">Adithya Mukunda</h5>
                     <p className="text-muted mb-2">
-                      Frontend Developer, UX Engineer & Coding Instructor from
+                      Fullstack Developer, UX Engineer & Coding Instructor from
                       Khammam. I teach HTML, CSS, JavaScript, React, Bootstrap,
                       Git and freelance readiness.
                     </p>
