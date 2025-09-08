@@ -10,14 +10,26 @@ const Navbar = () => {
         <NavLink className="navbar-brand fw-bold" to="/">
           <img
             src={logo}
-            alt="Codify Logo"
+            alt="CodeMedha Logo"
             style={{
-              height: "60px", // Increase this as needed
-              objectFit: "contain",
-              marginTop: "-10px", // Adjust these values to center vertically
-              marginBottom: "-10px",
+              height: "37px", // base size so navbar stays slim
+              transform: "scale(3.7)", // visually enlarge
+              marginTop: "7px", // align with text
+              transformOrigin: "center", // scale from center
             }}
           />
+          <span
+            style={{
+              fontFamily: "'Poppins', sans-serif",
+              fontWeight: "700",
+              fontSize: "1.4rem",
+              // letterSpacing: "0.5px",
+              marginLeft: "12px",
+            }}
+          >
+            <span style={{ color: "#0F2C59" }}>Code</span>{" "}
+            <span style={{ color: "#4CAF50", marginLeft: "1px" }}>Medha</span>
+          </span>
         </NavLink>
 
         {/* Mobile Toggle Button */}
