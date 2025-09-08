@@ -15,7 +15,7 @@ const Footer = () => {
           {/* Logo + Address */}
           <div className="col-md-4 text-center text-md-start">
             <h5 className="fw-bold mb-2">
-              Tech <span className="text-accent">Mukunda</span>
+              Code <span className="text-accent">Medha</span>
             </h5>
             <p className="small mb-1">
               <FaMapMarkerAlt className="me-2 text-white" />
