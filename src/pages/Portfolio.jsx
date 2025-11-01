@@ -134,7 +134,7 @@ const Portfolio = () => {
               />
             </div>
             <div className="col-md-8">
-              <div className="p-4 rounded shadow-lg">
+              <div className="p-4 rounded bg-fff">
                 <p>
                   Hi! I’m Adithya — a UI/UX Engineer and Fullstack Developer
                   with 5 years of experience. I craft clean, responsive, and
@@ -322,7 +322,7 @@ const Portfolio = () => {
           <h2 className="text-center mb-5">Certifications</h2>
           <div className="row g-4 text-center">
             <div className="col-md-4">
-              <div className="border rounded p-4 h-100 shadow-lg">
+              <div className="border rounded p-4 h-100 bg-fff">
                 <div className="mb-2" style={{ fontSize: "1.5rem" }}>
                   ✅
                 </div>
@@ -333,7 +333,7 @@ const Portfolio = () => {
 
             {/* Certification 2 */}
             <div className="col-md-4">
-              <div className="border rounded p-4 h-100 shadow-lg">
+              <div className="border rounded p-4 h-100 bg-fff">
                 <div className="mb-2" style={{ fontSize: "1.5rem" }}>
                   🎨
                 </div>
@@ -344,7 +344,7 @@ const Portfolio = () => {
 
             {/* Certification 3 */}
             <div className="col-md-4">
-              <div className="border rounded p-4 h-100 shadow-lg">
+              <div className="border rounded p-4 h-100 bg-fff">
                 <div className="mb-2" style={{ fontSize: "1.5rem" }}>
                   📜
                 </div>

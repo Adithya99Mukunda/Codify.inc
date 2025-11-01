@@ -66,7 +66,7 @@ const Navbar = () => {
                   `nav-link ${isActive ? "active" : ""}`
                 }
               >
-                Curriculum
+                Courses
               </NavLink>
             </li>
             <li className="nav-item">

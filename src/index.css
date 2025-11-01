@@ -13,6 +13,17 @@
   --codify-white: #ffffff;
   --codify-shadow: rgba(0, 0, 0, 0.08);
 }
+:root {
+  /* existing codify tokens... */
+  --brand: var(--codify-primary);
+  --accent: var(--codify-accent);
+  --ink: var(--codify-text-dark);
+  --muted: var(--codify-text-light);
+  --bg: var(--codify-bg);
+  --radius: 1rem;
+  --shadow: 0 12px 24px rgba(17, 24, 39, 0.08);
+}
+
 html, body, #root {
   margin: 0;
   padding: 0;
@@ -53,7 +64,7 @@ html, body, #root {
 /* === Hero Section === */
 .hero {
   /* Vibrant hero gradient with a soft overlay */
-  background: linear-gradient(135deg, rgba(37,99,235,0.10) 0%, rgba(249,115,22,0.10) 100%), 
+  background: linear-gradient(135deg, rgba(44, 50, 65, 0.1) 0%, rgba(249,115,22,0.10) 100%), 
               linear-gradient(120deg, #fff7ed 0%, #f1f5ff 100%);
   min-height: 350px;
   display: flex;
@@ -488,3 +499,64 @@ label.form-label {
 .project-modal .modal-content { border-radius: 1rem; }
 .project-modal .modal-body { padding-top: 0.75rem; }
 .project-modal .badge { font-weight: 500; letter-spacing: .2px; }
+
+.card-soft {
+  border: 0;
+  box-shadow: 0 12px 24px rgba(17, 24, 39, 0.08);
+  border-radius: var(--radius);
+}
+
+.course-card {
+  transition: 0.2s transform, 0.2s box-shadow;
+  border: 0;
+}
+.course-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(17, 24, 39, 0.08);
+}
+
+.badge-fee {
+  background: var(--brand);
+}
+.badge-duration {
+  background: var(--accent);
+}
+
+.btn-brand {
+  background: var(--brand);
+  color: #fff;
+}
+.btn-brand:hover {
+  background: #1d4ed8;
+  color: #fff;
+}
+.card-soft {
+  border-radius: 1rem !important;
+  transition: all 0.3s ease;
+}
+.card-soft:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+.timeline-card {
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fb 100%);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.timeline-card:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.timeline-card i {
+  opacity: 0.85;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.timeline-card:hover i {
+  transform: scale(1.1);
+  opacity: 1;
+}
