@@ -9,7 +9,7 @@ import CourseFullstack9m from './pages/CourseFullstack9m';
 import CourseDSA from './pages/CourseDSA';
 import CourseSoftSkills from './pages/CourseSoftSkills';
 import CourseAppDev from './pages/CourseAppDev';
-// import Roles from './pages/Roles';
+import Roles from './pages/Roles';
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
       <Route path="/courses/dsa" element={<CourseDSA />} />
       <Route path="/courses/app-development" element={<CourseAppDev />} />
       <Route path="/courses/soft-skills" element={<CourseSoftSkills />} />
-      {/* <Route path="/roles" element={<Roles />} /> */}
+      <Route path="/roles" element={<Roles />} />
     </Routes>
   );
 }

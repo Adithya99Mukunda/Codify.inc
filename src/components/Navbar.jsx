@@ -69,6 +69,18 @@ const Navbar = () => {
                 Courses
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to="/roles"
+                className={({ isActive }) =>
+                  `nav-link ${isActive ? "active" : ""}`
+                }
+              >
+                Roles
+              </NavLink>
+
+            </li>
+            
             <li className="nav-item">
               <NavLink
                 to="/portfolio"
