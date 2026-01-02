@@ -16,7 +16,6 @@
 html, body, #root {
   margin: 0;
   padding: 0;
-  background: linear-gradient(rgb(255, 254, 242), rgb(247, 248, 244));
   font-family: 'Inter', system-ui, sans-serif;
 }
 /* === Navbar === */

@@ -4,13 +4,13 @@ import mentorImg from "../assets/AdithyaMukunda1.jpg";
 
 const MeetYourMentor = () => {
   return (
-    <section className="py-5 pb-5 mb-5" style={{ background: "#fefcf5" }}>
+    <section className="py-5 pb-5 mb-5">
       <div className="container text-center">
-        <h2 className="fw-bold mb-4">Meet Your Mentor</h2>
+        <h2 className="fw-bold mb-4">Meet Your Mentors</h2>
         <div className="row justify-content-center">
           <div className="col-md-10 col-lg-8">
             {/* Card wrapped in Link */}
-            <Link to="/portfolio" className="text-decoration-none text-dark">
+            <Link to="/instructors" className="text-decoration-none text-dark">
               <div className="card border-0 shadow-sm p-4 mentor-card h-100">
                 <div className="d-flex flex-column flex-md-row align-items-center text-md-start">
                   <img

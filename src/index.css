@@ -560,3 +560,113 @@ label.form-label {
   transform: scale(1.1);
   opacity: 1;
 }
+/* ========== Contact page (Option B) ========== */
+
+.contact-topstrip {
+  background: linear-gradient(90deg, #fffdf8, #f7fbff);
+  border: 1px solid rgba(17,24,39,0.04);
+  padding: .6rem .9rem;
+  border-radius: 10px;
+  display:flex;
+  align-items:center;
+  gap: .5rem;
+  justify-content:space-between;
+  font-size: .95rem;
+  margin-bottom: .75rem;
+}
+.contact-topstrip .link-btn {
+  background: none;
+  border: none;
+  color: #2563eb;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight:600;
+  padding:0;
+}
+
+/* expanded batch panel */
+.batch-panel {
+  border-left: 3px solid rgba(37,99,235,0.12);
+  background: #ffffff;
+  padding: .9rem 1rem;
+  border-radius: 8px;
+  margin-bottom: .85rem;
+  font-size: .95rem;
+}
+
+/* main card */
+.contact-card {
+  border: 1px solid rgba(17,24,39,0.04);
+  background: #fff;
+  padding: 1.15rem;
+  border-radius: 12px;
+}
+
+/* intent pills */
+.intent-pills {
+  display:flex;
+  gap:.5rem;
+  flex-wrap:wrap;
+  margin-bottom:.75rem;
+}
+.pill {
+  border:1px solid #e6e6e6;
+  background:#fff;
+  padding:.45rem .7rem;
+  border-radius:999px;
+  cursor:pointer;
+  font-weight:600;
+  font-size:.95rem;
+}
+.pill.active {
+  background: linear-gradient(90deg,#f97316,#ff6b00);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 6px 18px rgba(249,115,22,0.12);
+}
+
+/* buttons */
+.btn-whatsapp.quick-wa {
+  background: linear-gradient(90deg,#25D366,#16a34a);
+  color: #fff;
+  border-radius: 8px;
+  padding: .5rem .75rem;
+  font-weight:700;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+}
+.btn-whatsapp.quick-wa:hover { filter:brightness(.95); }
+
+/* primary submit */
+.btn-primary {
+  background: linear-gradient(90deg,#f97316,#ff6b00);
+  border: none;
+  padding: .55rem .9rem;
+  border-radius: 8px;
+  font-weight:700;
+}
+
+/* inputs look */
+.form-control, .form-select, textarea.form-control {
+  border-radius: 8px;
+  border: 1px solid #e6e6e6;
+  padding: .5rem .65rem;
+}
+
+/* feedback */
+.feedback-ok { color: #16a34a; font-weight:600; margin-top:.5rem; }
+.feedback-err { color: #dc2626; font-weight:600; margin-top:.5rem; }
+
+/* small FAQ */
+.small-faq summary { cursor:pointer; list-style:none; }
+.small-faq summary::-webkit-details-marker { display:none; }
+
+/* responsive tweaks */
+@media (max-width:767px) {
+  .contact-topstrip { flex-direction:column; align-items:flex-start; gap:.5rem; }
+  .contact-topstrip .link-btn { margin-left:0; padding:0; }
+  .intent-pills { justify-content:center; }
+  .btn-whatsapp.quick-wa { flex:1; justify-content:center; }
+}

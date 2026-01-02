@@ -78,17 +78,16 @@ const Navbar = () => {
               >
                 Roles
               </NavLink>
-
             </li>
-            
+
             <li className="nav-item">
               <NavLink
-                to="/portfolio"
+                to="/instructors"
                 className={({ isActive }) =>
                   `nav-link ${isActive ? "active" : ""}`
                 }
               >
-                Portfolio
+                Instructors
               </NavLink>
             </li>
             <li className="nav-item">

@@ -169,7 +169,7 @@ export default function Courses() {
       <section className="py-4">
         <div className="container">
           <div className="d-flex justify-content-between align-items-end mb-3">
-            <h2 className="section-title mb-0">Programs</h2>
+            <h2 className="section-title text-center mb-0">Programs</h2>
             {/* <small className="text-muted">{COURSES.length} active courses</small> */}
           </div>
 

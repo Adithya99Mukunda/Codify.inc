@@ -5,11 +5,6 @@ import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import Footer from "../components/Footer";
 
-/**
- * Roles.jsx
- * Complete Roles-in-IT page with colorful skill badges and populated modals.
- */
-
 const ROLE_DATA = [
   {
     id: "business-analyst",
@@ -18,7 +13,7 @@ const ROLE_DATA = [
     description: [
       "Business Analysts (BAs) translate stakeholder needs into clear, testable requirements for engineering teams.",
       "They work closely with product, design and engineering to ensure the solution meets business objectives and user needs.",
-      "BAs help clarify scope, acceptance criteria and run validation sessions during development."
+      "BAs help clarify scope, acceptance criteria and run validation sessions during development.",
     ],
     responsibilities: [
       "Gather and document business requirements and user stories",
@@ -28,9 +23,17 @@ const ROLE_DATA = [
       "Prioritise features with product & engineering teams",
       "Produce requirement docs, process flows and mockups",
       "Help in UAT (user acceptance testing) and sign-offs",
-      "Translate ambiguous requests into actionable tasks"
+      "Translate ambiguous requests into actionable tasks",
     ],
-    skills: ["Requirement Docs", "SQL", "Excel", "Wireframing", "Communication", "User Stories"]
+    skills: [
+      "Requirement Docs",
+      "SQL",
+      "Excel",
+      "Wireframing",
+      "Communication",
+      "User Stories",
+    ],
+    icon: "bi-briefcase-fill text-primary",
   },
 
   {
@@ -40,7 +43,7 @@ const ROLE_DATA = [
     description: [
       "Product Managers own the product strategy, user outcomes and the roadmap.",
       "They decide what gets built (and why), coordinate stakeholders, and measure whether the product meets business goals.",
-      "PMs balance user empathy, business metrics and engineering constraints."
+      "PMs balance user empathy, business metrics and engineering constraints.",
     ],
     responsibilities: [
       "Define product vision and measurable goals (OKRs/KPIs)",
@@ -50,9 +53,16 @@ const ROLE_DATA = [
       "Run experiments and analyze metrics",
       "Conduct user research and feedback sessions",
       "Support go-to-market & launch activities",
-      "Make trade-offs between speed, scope and quality"
+      "Make trade-offs between speed, scope and quality",
     ],
-    skills: ["Roadmapping", "Prioritisation", "A/B Testing", "Stakeholder Mgmt", "Analytics", "Notion/Jira"]
+    skills: [
+      "Roadmapping",
+      "Prioritisation",
+      "A/B Testing",
+      "Stakeholder Mgmt",
+      "Analytics",
+      "Notion/Jira",
+    ],
   },
 
   {
@@ -62,7 +72,7 @@ const ROLE_DATA = [
     description: [
       "UI/UX Designers turn product problems into usable, delightful interfaces.",
       "They run research, create wireframes and high-fidelity prototypes and validate designs with real users.",
-      "Good designers balance aesthetics, accessibility and performance."
+      "Good designers balance aesthetics, accessibility and performance.",
     ],
     responsibilities: [
       "Run user research and interviews",
@@ -72,9 +82,16 @@ const ROLE_DATA = [
       "Prepare handoff docs and redlines for developers",
       "Advocate accessibility and inclusive design",
       "Work with PMs to translate insights into features",
-      "Participate in design reviews and feedback cycles"
+      "Participate in design reviews and feedback cycles",
     ],
-    skills: ["Figma", "Prototyping", "User Research", "Accessibility", "Design Systems"]
+    skills: [
+      "Figma",
+      "Prototyping",
+      "User Research",
+      "Accessibility",
+      "Design Systems",
+    ],
+    icon: "bi-palette-fill text-danger",
   },
 
   {
@@ -84,7 +101,7 @@ const ROLE_DATA = [
     description: [
       "Frontend Engineers build the client-side experience: layout, interactivity and responsive behaviour.",
       "They work with designers and backend teams to implement fast, accessible and maintainable UI.",
-      "Frontenders are expected to ship polished interfaces and optimize for performance."
+      "Frontenders are expected to ship polished interfaces and optimize for performance.",
     ],
     responsibilities: [
       "Translate designs into responsive, accessible HTML/CSS",
@@ -94,7 +111,7 @@ const ROLE_DATA = [
       "Write unit & integration tests for components",
       "Collaborate with backend for API contracts",
       "Ensure cross-browser and mobile compatibility",
-      "Participate in code reviews and maintain docs"
+      "Participate in code reviews and maintain docs",
     ],
     skills: [
       "HTML",
@@ -105,8 +122,9 @@ const ROLE_DATA = [
       "JavaScript",
       "Angular",
       "React",
-      "TypeScript"
-    ]
+      "TypeScript",
+    ],
+    icon: "bi-window-split text-warning",
   },
 
   {
@@ -116,7 +134,7 @@ const ROLE_DATA = [
     description: [
       "Backend Engineers design and implement the server-side logic, APIs and data layers that power applications.",
       "They focus on reliability, scalability, data integrity and security.",
-      "Backends often integrate with databases, caches and external services."
+      "Backends often integrate with databases, caches and external services.",
     ],
     responsibilities: [
       "Design and implement REST/GraphQL APIs",
@@ -126,7 +144,7 @@ const ROLE_DATA = [
       "Write tests for API contracts and business logic",
       "Design for scalability and fault-tolerance",
       "Collaborate with frontend on API contracts",
-      "Monitor and troubleshoot production issues"
+      "Monitor and troubleshoot production issues",
     ],
     // grouped stacks for clarity per your example
     skills: [
@@ -135,8 +153,9 @@ const ROLE_DATA = [
       "Java: Spring, Spring Boot",
       "Databases: Postgres, MongoDB",
       "REST / GraphQL",
-      "Auth & Security"
-    ]
+      "Auth & Security",
+    ],
+    icon: "bi-hdd-network text-success",
   },
 
   {
@@ -146,7 +165,7 @@ const ROLE_DATA = [
     description: [
       "Fullstack Developers combine frontend and backend skills to deliver complete features.",
       "They move across the stack to reduce handoffs, speed up delivery and own deployments.",
-      "Strong fullstack devs know tradeoffs and where to prioritize effort."
+      "Strong fullstack devs know tradeoffs and where to prioritize effort.",
     ],
     responsibilities: [
       "Implement end-to-end features across frontend & backend",
@@ -156,9 +175,10 @@ const ROLE_DATA = [
       "Deploy services and troubleshoot full-stack issues",
       "Help mentor team members and review code",
       "Improve observability and logging for features",
-      "Balance UX, performance and maintainability"
+      "Balance UX, performance and maintainability",
     ],
-    skills: ["React", "Node.js", "Express", "Databases", "Deployment", "CI/CD"]
+    skills: ["React", "Node.js", "Express", "Databases", "Deployment", "CI/CD"],
+    icon: "bi-stack text-info",
   },
 
   {
@@ -168,7 +188,7 @@ const ROLE_DATA = [
     description: [
       "Mobile Developers create cross-platform apps using React Native or native toolchains.",
       "They handle mobile-specific concerns like gestures, offline storage and app publishing.",
-      "Testing on devices, performance tuning and store submissions are part of the job."
+      "Testing on devices, performance tuning and store submissions are part of the job.",
     ],
     responsibilities: [
       "Build cross-platform UI with React Native / Expo",
@@ -178,9 +198,16 @@ const ROLE_DATA = [
       "Run device testing and fix platform-specific bugs",
       "Prepare app-signing and store submissions",
       "Implement analytics and crash reporting",
-      "Collaborate with backend for mobile-optimized APIs"
+      "Collaborate with backend for mobile-optimized APIs",
     ],
-    skills: ["React Native", "Expo", "Android Studio", "Xcode", "Device APIs", "App Publishing"]
+    skills: [
+      "React Native",
+      "Expo",
+      "Android Studio",
+      "Xcode",
+      "Device APIs",
+      "App Publishing",
+    ],
   },
 
   {
@@ -190,7 +217,7 @@ const ROLE_DATA = [
     description: [
       "Data Analysts wrangle and visualize data to answer product and business questions.",
       "They prepare dashboards, run ad-hoc analyses and equip teams with insights to make decisions.",
-      "This role is heavy on SQL, spreadsheets and visualization tools."
+      "This role is heavy on SQL, spreadsheets and visualization tools.",
     ],
     responsibilities: [
       "Write SQL queries to extract and transform data",
@@ -200,9 +227,16 @@ const ROLE_DATA = [
       "Collaborate with PMs to define metrics",
       "Provide data-driven recommendations",
       "Automate routine reports and alerts",
-      "Document datasets and definitions"
+      "Document datasets and definitions",
     ],
-    skills: ["SQL", "Excel", "Data Visualization", "Python (pandas)", "BI Tools"]
+    skills: [
+      "SQL",
+      "Excel",
+      "Data Visualization",
+      "Python (pandas)",
+      "BI Tools",
+    ],
+    icon: "bi-bar-chart-line-fill text-primary",
   },
 
   {
@@ -212,7 +246,7 @@ const ROLE_DATA = [
     description: [
       "Data Scientists design, train and deploy machine learning models to power features and insights.",
       "They bridge data engineering and product to create models that are reliable, monitored and maintainable.",
-      "Model evaluation, feature engineering and production deployment are key responsibilities."
+      "Model evaluation, feature engineering and production deployment are key responsibilities.",
     ],
     responsibilities: [
       "Define ML problem and success metrics",
@@ -222,9 +256,16 @@ const ROLE_DATA = [
       "Deploy models and implement monitoring",
       "Collaborate with engineering to productionize models",
       "Perform error analysis and iterate models",
-      "Document model decisions and data lineage"
+      "Document model decisions and data lineage",
     ],
-    skills: ["Python", "scikit-learn", "TensorFlow/PyTorch", "Feature Engineering", "MLOps", "Data Pipelines"]
+    skills: [
+      "Python",
+      "scikit-learn",
+      "TensorFlow/PyTorch",
+      "Feature Engineering",
+      "MLOps",
+      "Data Pipelines",
+    ],
   },
 
   {
@@ -234,7 +275,7 @@ const ROLE_DATA = [
     description: [
       "QA Engineers design test plans, write automated tests and ensure shipping quality.",
       "They find edge cases, build regression suites and collaborate with devs to prevent bugs at source.",
-      "Automation and CI integration are critical for fast delivery pipelines."
+      "Automation and CI integration are critical for fast delivery pipelines.",
     ],
     responsibilities: [
       "Design test plans and test cases",
@@ -244,9 +285,9 @@ const ROLE_DATA = [
       "Integrate tests into CI pipelines",
       "Maintain test environments and fixtures",
       "Measure and reduce flaky tests",
-      "Collaborate on quality-focused design decisions"
+      "Collaborate on quality-focused design decisions",
     ],
-    skills: ["Playwright", "Selenium", "Jest", "Test Plans", "CI/CD"]
+    skills: ["Playwright", "Selenium", "Jest", "Test Plans", "CI/CD"],
   },
 
   {
@@ -256,7 +297,7 @@ const ROLE_DATA = [
     description: [
       "DevOps / SREs build CI/CD, manage infrastructure, and ensure production reliability.",
       "They automate deployments, design monitoring and run incident response practices.",
-      "Strong knowledge of containers and orchestration is required."
+      "Strong knowledge of containers and orchestration is required.",
     ],
     responsibilities: [
       "Design and operate CI/CD pipelines",
@@ -266,9 +307,16 @@ const ROLE_DATA = [
       "Implement infrastructure-as-code (Terraform/CloudFormation)",
       "Capacity planning and performance tuning",
       "Run postmortems and improve reliability",
-      "Manage secrets and secure deployments"
+      "Manage secrets and secure deployments",
     ],
-    skills: ["Docker", "Kubernetes", "Terraform", "GitHub Actions", "Prometheus", "Grafana"]
+    skills: [
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "GitHub Actions",
+      "Prometheus",
+      "Grafana",
+    ],
   },
 
   {
@@ -278,7 +326,7 @@ const ROLE_DATA = [
     description: [
       "Cybersecurity Engineers secure applications, networks and infrastructure through risk assessment and controls.",
       "They run vulnerability assessments, manage incident response and implement secure development practices.",
-      "Security is integrated across design, development and operations."
+      "Security is integrated across design, development and operations.",
     ],
     responsibilities: [
       "Perform vulnerability scanning and penetration testing",
@@ -288,22 +336,61 @@ const ROLE_DATA = [
       "Run threat modelling and risk assessments",
       "Manage secrets, keys and IAM policies",
       "Support audits and compliance efforts",
-      "Provide security training and best practices"
+      "Provide security training and best practices",
     ],
-    skills: ["Ethical Hacking", "Network Security", "IAM", "Web App Security", "SIEM"]
-  }
+    skills: [
+      "Ethical Hacking",
+      "Network Security",
+      "IAM",
+      "Web App Security",
+      "SIEM",
+    ],
+  },
 ];
 
 // map skill text to bootstrap badge class for colorful labels
 function badgeClassForSkill(skill) {
   const s = (skill || "").toLowerCase();
-  if (s.includes("react") || s.includes("figma") || s.includes("expo") || s.includes("ui")) return "badge bg-info text-dark";
-  if (s.includes("node") || s.includes("docker") || s.includes("server") || s.includes("kubernetes")) return "badge bg-success text-dark";
-  if (s.includes("python") || s.includes("django") || s.includes("flask") || s.includes("ml") || s.includes("tensorflow")) return "badge bg-warning text-dark";
-  if (s.includes("java") || s.includes("spring")) return "badge bg-primary text-white";
-  if (s.includes("sql") || s.includes("database") || s.includes("postgres") || s.includes("mongo")) return "badge bg-secondary text-white";
-  if (s.includes("testing") || s.includes("playwright") || s.includes("selenium") || s.includes("jest")) return "badge bg-danger text-white";
-  if (s.includes("security") || s.includes("ethical")) return "badge bg-dark text-white";
+  if (
+    s.includes("react") ||
+    s.includes("figma") ||
+    s.includes("expo") ||
+    s.includes("ui")
+  )
+    return "badge bg-info text-dark";
+  if (
+    s.includes("node") ||
+    s.includes("docker") ||
+    s.includes("server") ||
+    s.includes("kubernetes")
+  )
+    return "badge bg-success text-dark";
+  if (
+    s.includes("python") ||
+    s.includes("django") ||
+    s.includes("flask") ||
+    s.includes("ml") ||
+    s.includes("tensorflow")
+  )
+    return "badge bg-warning text-dark";
+  if (s.includes("java") || s.includes("spring"))
+    return "badge bg-primary text-white";
+  if (
+    s.includes("sql") ||
+    s.includes("database") ||
+    s.includes("postgres") ||
+    s.includes("mongo")
+  )
+    return "badge bg-secondary text-white";
+  if (
+    s.includes("testing") ||
+    s.includes("playwright") ||
+    s.includes("selenium") ||
+    s.includes("jest")
+  )
+    return "badge bg-danger text-white";
+  if (s.includes("security") || s.includes("ethical"))
+    return "badge bg-dark text-white";
   // default / neutral
   return "badge bg-light text-dark border";
 }
@@ -316,18 +403,26 @@ export default function Roles() {
       <Navbar />
 
       <HeroSection
-        title={<span style={{ color: "#ff6b00" }}>Roles in Software Industry</span>}
+        title={
+          <span style={{ color: "#000" }}>Roles in Software Industry</span>
+        }
         subtitle="A practical walkthrough of roles in a product lifecycle — who does what, responsibilities, and the skills you'll need."
       >
         <p className="lead mb-0">
-          Designed for college students and early-career learners — understand the flow from idea to production and where you might fit.
+          Designed for college students and early-career learners — understand
+          the flow from idea to production and where you might fit.
         </p>
       </HeroSection>
 
       <section className="container py-5">
         <div className="text-center mb-4">
-          <h2 className="fw-bold">Explore the roles — follow a project lifecycle</h2>
-          <p className="text-muted">Cards are grouped roughly in lifecycle order: planning → design → build → test → deploy → secure → maintain.</p>
+          <h2 className="fw-bold">
+            Explore the roles — follow a project lifecycle
+          </h2>
+          <p className="text-muted">
+            Cards are grouped roughly in lifecycle order: planning → design →
+            build → test → deploy → secure → maintain.
+          </p>
         </div>
 
         <div className="row g-4">
@@ -335,9 +430,13 @@ export default function Roles() {
             <div className="col-12 col-md-6 col-lg-4" key={role.id}>
               <article className="card p-3 shadow-sm border-0 rounded-4 h-100">
                 <div className="d-flex align-items-start gap-3">
-                  <div className="bg-white rounded-3 p-3 shadow-sm" style={{ minWidth: 64 }}>
+                  <div
+                    className="bg-white rounded-3 p-3 shadow-sm"
+                    style={{ minWidth: 64 }}
+                  >
                     {/* simple icon placeholder: use bootstrap icons classes in CSS-like text */}
-                    <i className={`bi fs-3 ${role.id === "backend" ? "bi-hdd-network text-success" : ""}`}></i>
+                    <i className={`fs-3 ${role.icon}`}></i>
+
                     {/* note: icons are decorative; keep them if your icons set available */}
                   </div>
 
@@ -347,7 +446,14 @@ export default function Roles() {
 
                     <div className="mb-3 d-flex flex-wrap gap-2">
                       {role.skills.map((skill, i) => (
-                        <span key={i} className={badgeClassForSkill(skill)} style={{ fontSize: ".78rem", padding: ".35rem .55rem" }}>
+                        <span
+                          key={i}
+                          className={badgeClassForSkill(skill)}
+                          style={{
+                            fontSize: ".78rem",
+                            padding: ".35rem .55rem",
+                          }}
+                        >
                           {skill}
                         </span>
                       ))}
@@ -372,7 +478,9 @@ export default function Roles() {
       </section>
 
       <section className="container py-4">
-        <h4 className="mb-3 fw-bold text-center">How roles collaborate — quick table</h4>
+        <h4 className="mb-3 fw-bold text-center">
+          How roles collaborate — quick table
+        </h4>
         <div className="table-responsive">
           <table className="table table-striped align-middle">
             <thead className="table-light">
@@ -428,10 +536,18 @@ export default function Roles() {
           <div className="row align-items-center">
             <div className="col-md-8">
               <h5 className="mb-1">Career pathway — from idea to hire</h5>
-              <p className="small text-muted mb-0">Bootcamp → Projects → Interview Prep → Placement. If you’re unsure where to start, book a free mentor call.</p>
+              <p className="small text-muted mb-0">
+                Bootcamp → Projects → Interview Prep → Placement. If you’re
+                unsure where to start, book a free mentor call.
+              </p>
             </div>
             <div className="col-md-4 text-md-end mt-3 mt-md-0">
-              <a href="https://wa.me/918639460402" className="btn btn-brand btn-lg">Book free mentor call</a>
+              <a
+                href="https://wa.me/918639460402"
+                className="btn btn-brand btn-lg"
+              >
+                Book free mentor call
+              </a>
             </div>
           </div>
         </div>
@@ -440,26 +556,49 @@ export default function Roles() {
         <div className="accordion" id="faq">
           <div className="accordion-item">
             <h2 className="accordion-header">
-              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+              <button
+                className="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq1"
+              >
                 Do I need to be good at math to work in software?
               </button>
             </h2>
-            <div id="faq1" className="accordion-collapse collapse" data-bs-parent="#faq">
+            <div
+              id="faq1"
+              className="accordion-collapse collapse"
+              data-bs-parent="#faq"
+            >
               <div className="accordion-body text-muted">
-                Not necessarily. Roles like frontend, UI/UX, QA and product focus more on logic, design and communication. Data roles and some backend roles use more maths—those can be learned step-by-step.
+                Not necessarily. Roles like frontend, UI/UX, QA and product
+                focus more on logic, design and communication. Data roles and
+                some backend roles use more maths—those can be learned
+                step-by-step.
               </div>
             </div>
           </div>
 
           <div className="accordion-item">
             <h2 className="accordion-header">
-              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+              <button
+                className="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq2"
+              >
                 Which role is easiest to start with?
               </button>
             </h2>
-            <div id="faq2" className="accordion-collapse collapse" data-bs-parent="#faq">
+            <div
+              id="faq2"
+              className="accordion-collapse collapse"
+              data-bs-parent="#faq"
+            >
               <div className="accordion-body text-muted">
-                Frontend and UI/UX are often friendly starting points for visually-minded students. Fullstack and backend require more systemic thinking but are very rewarding.
+                Frontend and UI/UX are often friendly starting points for
+                visually-minded students. Fullstack and backend require more
+                systemic thinking but are very rewarding.
               </div>
             </div>
           </div>
@@ -467,7 +606,12 @@ export default function Roles() {
       </section>
 
       {/* MODAL */}
-      <div className="modal fade" id="roleModal" tabIndex="-1" aria-hidden="true">
+      <div
+        className="modal fade"
+        id="roleModal"
+        tabIndex="-1"
+        aria-hidden="true"
+      >
         <div className="modal-dialog modal-lg modal-dialog-centered">
           <div className="modal-content rounded-4">
             <div className="modal-body p-4">
@@ -479,13 +623,20 @@ export default function Roles() {
                       <p className="text-muted mb-0">{selected.short}</p>
                     </div>
                     <div>
-                      <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      <button
+                        type="button"
+                        className="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
                     </div>
                   </div>
 
                   <div className="mb-3">
                     {selected.description.map((line, idx) => (
-                      <p className="small text-muted mb-1" key={idx}>{line}</p>
+                      <p className="small text-muted mb-1" key={idx}>
+                        {line}
+                      </p>
                     ))}
                   </div>
 
@@ -493,7 +644,9 @@ export default function Roles() {
                     <strong>Responsibilities</strong>
                     <ul className="mt-2">
                       {selected.responsibilities.map((r, i) => (
-                        <li key={i} className="small text-muted">{r}</li>
+                        <li key={i} className="small text-muted">
+                          {r}
+                        </li>
                       ))}
                     </ul>
                   </div>
@@ -502,7 +655,14 @@ export default function Roles() {
                     <strong>Skills & Tools</strong>
                     <div className="mt-2 d-flex flex-wrap gap-2">
                       {selected.skills.map((skill, i) => (
-                        <span key={i} className={`${badgeClassForSkill(skill)}`} style={{ fontSize: ".78rem", padding: ".35rem .55rem" }}>
+                        <span
+                          key={i}
+                          className={`${badgeClassForSkill(skill)}`}
+                          style={{
+                            fontSize: ".78rem",
+                            padding: ".35rem .55rem",
+                          }}
+                        >
                           {skill}
                         </span>
                       ))}
@@ -510,7 +670,12 @@ export default function Roles() {
                   </div>
 
                   <div className="d-flex  gap-2">
-                    <button className="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                    <button
+                      className="btn btn-outline-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
                   </div>
                 </>
               ) : (

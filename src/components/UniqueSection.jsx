@@ -80,7 +80,7 @@ const UniqueSection = () => {
   return (
     <section
       className="py-5"
-      style={{ background: "linear-gradient(to bottom, #fffef2, #f7f8f4)" }}
+      
     >
       <div className="container text-center">
         <h2 className="fw-bold mb-5">
