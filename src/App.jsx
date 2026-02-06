@@ -33,7 +33,7 @@ function App() {
       <Route path="/instructors" element={<Instructors />} />
 
       {/* Instructor portfolios */}
-      <Route path="/instructors/adithya" element={<Portfolio />} />
+      {/* <Route path="/instructors/adithya" element={<Portfolio />} /> */}
       <Route path="/instructors/sri-harsha" element={<InstructorSriHarsha />} />
       <Route path="/instructors/akhil-potla" element={<InstructorAkhil />} />
       <Route path="/instructors/mahesh-boddu" element={<InstructorMahesh />} />
